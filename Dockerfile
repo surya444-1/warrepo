@@ -1,7 +1,5 @@
-FROM:ubuntu 
-RUN apt-get update
-RUN apt-get -y install apache2
-ADD . /var/lib/jenkins/
-EXPOSE:8086
-ENTRYPOINT apachectl -D FOREGROUND
-ENV name vikas
+FROM Tomcat:8.5.54-jre8
+# Dummy text to test 
+EXPOSE 8080
+ADD target/jenkins.war jenkins.war
+
